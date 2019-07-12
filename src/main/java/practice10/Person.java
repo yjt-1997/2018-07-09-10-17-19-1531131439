@@ -36,6 +36,8 @@ public class Person {
     }
 
     public boolean equals(Object another) {
+        if(another==null||!(another instanceof  Person))
+            return false;
         if (id == ((Person) another).getId())
             return true;
         return false;

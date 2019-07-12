@@ -40,17 +40,17 @@ public class Klass {
 
     public void appendMember(Student student) {
         students.add(student);
-        if(getTeacher()!=null)
-            System.out.println(String.format("I am %s. I know %s has joined Class %d.", teacher.getName(), student.getName(), number));
+        if (getTeacher() != null)
+            System.out.print(String.format("I am %s. I know %s has joined Class %d.\n", teacher.getName(), student.getName(), number));
     }
 
     public void assignLeader(Student student) {
         if (!students.contains(student))
-            System.out.println("It is not one of us.\n");
+            System.out.print("It is not one of us.\n");
         else {
             this.leader = student;
-            if(getTeacher()!=null)
-                System.out.println(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number));
+            if (getTeacher() != null)
+                System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number));
         }
     }
 
